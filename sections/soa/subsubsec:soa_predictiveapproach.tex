@@ -1,0 +1,82 @@
+\documentclass[../../main.tex]{subfiles}
+\graphicspath{{\subfix{../../res/}}}
+\begin{document}
+Several researches focused on predictive approaches such as, Association rules mining, ANN based algorithm, Simple Logistic, 
+ Random Forest, Logistic regression analysis, ICRM2.\cite{mduma_survey_2019}. 
+In this paper, we are going to analyse the following models read from these literratures \cite{mduma_survey_2019,quinlan_induction_1986,yadav_mining_2012,heredia_student_2015,ramirez_prediction_2018,cox_regression_1958,perez_modelo_2018,pandey_data_2011,cover_nearest_1967,mardolkar_forecasting_2020,zhang_neural_2000,rudin_stop_2019,siri_predicting_2015,m_alban_she_is_with_the_faculty_of_engineering_and_applied_sciences_of_the_technical_university_cotopaxi_neural_2019,boser_training_1992,lee_machine_2019,behr_early_2020,friedman_stochastic_2002,eckert_analysis_2015,tenpipat_student_2020,liang_machine_2016,liang_big_2016,fischer_angulo_modelo_2012,miranda_analysis_2017,viloria_integration_2019,kemper_predicting_2020,agrusti_university_2019}:
+\begin{enumerate}
+\item Decision Trees
+\item Logistic Regression
+\item K-Nearest Neighbors (KNN)
+\item Neural Networks
+\item Support Vector Machine
+\item Random Forest
+\item Principal Component Analysis
+\item K-Mean clustering
+\item Isolation Forest
+\item Lasso Regression
+\end{enumerate}
+
+From this review paper \cite{agrusti_university_2019}, we can extract this following table of these different techniques and how often they were used in other research paper.
+\begin{table}[H]
+    \centering
+    \caption{CLASSIFICATION TECHNIQUES frequencies\cite{agrusti_university_2019}}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Techniques} & \textbf{Frequency}\\
+        \hline
+        Decision Tree & 49\\
+        \hline
+        Neural Networks & 29\\
+        \hline
+        Logistic regression & 25\\
+        \hline
+        KNN & 9\\
+        \hline
+    \end{tabular}
+    \label{tab:class_tech_freq_agrusti}
+\end{table}
+These models have been chosen as they have been the most recurring ones within the literature. We will analyse each models to list the pros and cons of each one and to determine which one(s) we should use to build our predictive system.
+However, we need to find how frequent the other algorithm can be found in the literature in the domain of academic dropout or success.
+
+
+\vspace{8pt}
+\paragraph{Decision Tree}
+\subfile{predictiveAlgorithm/decisiontree}
+
+\vspace{8pt}
+\paragraph{Logistic Regression}
+\subfile{predictiveAlgorithm/logisticregression}
+
+\vspace{8pt}
+\paragraph{K-Nearest Neighbors (KNN)}
+\subfile{predictiveAlgorithm/knn}
+
+\vspace{8pt}
+\paragraph{Neural Networks}
+\subfile{predictiveAlgorithm/neuralnetworks}
+
+\vspace{8pt}
+\subsubsection{Support Vector Machine (SVM)}
+\subfile{predictiveAlgorithm/svm}
+
+\vspace{8pt}
+\paragraph{Random Forest}
+\subfile{predictiveAlgorithm/randomforest}
+
+\vspace{8pt}
+\paragraph{Principal Component Analysis}
+\subfile{predictiveAlgorithm/pca}
+
+\vspace{8pt}
+\paragraph{K-Mean clustering}
+\subfile{predictiveAlgorithm/kmeanclustering}
+
+\vspace{8pt}
+\paragraph{Isolation Forest}
+\subfile{predictiveAlgorithm/isolationforest}
+
+\vspace{8pt}
+\paragraph{Lasso Regression}
+\subfile{predictiveAlgorithm/lassoregression}
+\end{document}

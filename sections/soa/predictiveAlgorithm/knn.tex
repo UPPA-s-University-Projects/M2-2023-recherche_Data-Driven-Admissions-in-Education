@@ -1,0 +1,45 @@
+\documentclass[../../../main.tex]{subfiles}
+\graphicspath{{\subfix{../../../res/}}}
+\begin{document}
+K-Nearest Neighbors (KNN) is fundamental in the field of ML. As a non-parametric, instance-based learning algorithm, it is particularly renewed for its simplicity and effectiveness for tasks such as classification and regression.
+The core principle of KNN is to predict labels of new data points by looking at the closest labelled data points 'K' and - for classification, take a majority vote - or an average in the case of regression. This algorithm basically learns by itself with the more data it is fed.
+It can be really powerful in our case, as it excels in scenarios where the decision boundary is irregular and blurry.
+
+The following study \cite{shiful_machine_2021}, compared to other methods, was the second most accurate models from all other models (apart from the Random Forest algorithm).
+\begin{table}[H]
+    \centering
+    \caption{Training and testing Accuracy\cite{shiful_machine_2021}}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Model name} & \textbf{Training accuracy}  & \textbf{Testing accuracy}\\
+        \hline
+        Decision Tree & 80\% & 80\% \\
+        \hline
+        KNN & 83\% & 84\% \\
+        \hline
+        Random forest & 94\% & 86\% \\
+        \hline
+    \end{tabular}
+    \label{tab:training_testing_acc_shiful}
+\end{table}
+
+This review shows us that, even though it  might not be the most accurate model (at least in this study \cite{shiful_machine_2021}), it is an interesting model to chose for comparing students between them, and potentially discover groupings of students which may be at risk of dropout.
+
+From this same study, the searchers have compared each classifier for each model. For KNN, they found these results :
+\begin{table}[H]
+    \centering
+    \caption{Comparison of all classifier\cite{shiful_machine_2021}}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Classifier} & & \textbf{Precision} & \textbf{recall}\\
+        \hline
+        KNN & Not Dropout & 86\% & 84\% \\
+        \cline{2-4} 
+        & Dropout & 69\% & 26\% \\
+        \hline
+    \end{tabular}
+    \label{tab:compar_classifier_shiful}
+\end{table}
+
+This result implies that the model is pretty accurate, with an estimated 85\% of accuracy with these new results.
+\end{document}
