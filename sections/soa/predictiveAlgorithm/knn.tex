@@ -1,8 +1,8 @@
 \documentclass[../../../main.tex]{subfiles}
 \graphicspath{{\subfix{../../../res/}}}
 \begin{document}
-K-Nearest Neighbors (KNN) is fundamental in the field of ML. As a non-parametric, instance-based learning algorithm, it is particularly renewed for its simplicity and effectiveness for tasks such as classification and regression.
-The core principle of KNN is to predict labels of new data points by looking at the closest labelled data points 'K' and - for classification, take a majority vote - or an average in the case of regression. This algorithm basically learns by itself with the more data it is fed.
+\acrfull{knn} is fundamental in the field of \acrshort{ml}. As a non-parametric, instance-based learning algorithm, it is particularly renewed for its simplicity and effectiveness for tasks such as classification and regression.
+The core principle of \acrfull{knn} is to predict labels of new data points by looking at the closest labelled data points 'K' and - for classification, take a majority vote - or an average in the case of regression. This algorithm basically learns by itself with the more data it is fed.
 It can be really powerful in our case, as it excels in scenarios where the decision boundary is irregular and blurry.
 
 The following study \cite{shiful_machine_2021}, compared to other methods, was the second most accurate models from all other models (apart from the Random Forest algorithm).
@@ -15,7 +15,7 @@ The following study \cite{shiful_machine_2021}, compared to other methods, was t
         \hline
         Decision Tree & 80\% & 80\% \\
         \hline
-        KNN & 83\% & 84\% \\
+        \acrfull{knn} & 83\% & 84\% \\
         \hline
         Random forest & 94\% & 86\% \\
         \hline
@@ -25,7 +25,7 @@ The following study \cite{shiful_machine_2021}, compared to other methods, was t
 
 This review shows us that, even though it  might not be the most accurate model (at least in this study \cite{shiful_machine_2021}), it is an interesting model to chose for comparing students between them, and potentially discover groupings of students which may be at risk of dropout.
 
-From this same study, the searchers have compared each classifier for each model. For KNN, they found these results :
+From this same study, the searchers have compared each classifier for each model. For \acrshort{knn}, they found these results :
 \begin{table}[H]
     \centering
     \caption{Comparison of all classifier\cite{shiful_machine_2021}}
@@ -33,7 +33,7 @@ From this same study, the searchers have compared each classifier for each model
         \hline
         \textbf{Classifier} & & \textbf{Precision} & \textbf{recall}\\
         \hline
-        KNN & Not Dropout & 86\% & 84\% \\
+        \acrshort{knn} & Not Dropout & 86\% & 84\% \\
         \cline{2-4} 
         & Dropout & 69\% & 26\% \\
         \hline

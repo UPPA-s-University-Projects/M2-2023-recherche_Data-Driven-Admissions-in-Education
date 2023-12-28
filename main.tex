@@ -1,6 +1,7 @@
 \documentclass[conference]{IEEEtran}
 \IEEEoverridecommandlockouts
-% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
+%Loading packages
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
@@ -9,11 +10,18 @@
 \usepackage{xcolor}
 \usepackage{float}
 \usepackage{subfiles}
+\usepackage[toc]{glossaries}
+
+%Style coding
 %\restylefloat{table}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
-\begin{document}
 
+%Load glossary
+\loadglsentries{res/glossaries/abbreviation}
+
+
+\begin{document}
 
 \title{Data-Driven Admissions in Education: Enhancing Student Success by Matching Profiles to Optimal Academic Paths\\
 {\footnotesize \textsuperscript{}}
@@ -30,18 +38,9 @@ clement.combier@etud.univ-pau.fr}}
 \pagestyle{plain}
 
 \tableofcontents
-
-\section*{abbreviation}
-\begin{itemize}
-    \item[] AI : Artificial Intelligence
-    \item[] ML : Machine learning
-    \item[] KNN : K-Nearest Neighbors
-    \item[] CNN : Convolutional Neural Networks 
-    \item[] RNN Recurrent Neural Networks 
-    \item[] SVM : Support Vector Machines 
-    \item[] RF : Random Forest
-    \item[] SMOTE : Synthetic Minority Oversampling TEchniques
-\end{itemize}
+\listoffigures
+\listoftables
+\printglossary[type=\acronymtype, title=Accronymes, toctitle=Accronymes]
 
 \vspace{16pt}
 \begin{abstract}
@@ -87,5 +86,6 @@ Finlay, I would like to thanks my friends and family for their support, their mo
 
 \bibliographystyle{plain}
 \bibliography{bib/references}
+\printglossary
 
 \end{document}

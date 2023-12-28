@@ -2,31 +2,31 @@
 \graphicspath{{\subfix{../../../res/}}}
 \begin{document}
 
-Another good method for classification and regression tasks, Random Forest, is a robust and versatile learning method. It operated by creating a multitude of decision trees during training, then outputting the class - for classification, the mode of the classes - for regression, the mean prediction (for each individual tree).
+Another good method for classification and regression tasks, \acrfull{rf}, is a robust and versatile learning method. It operated by creating a multitude of decision trees during training, then outputting the class - for classification, the mode of the classes - for regression, the mean prediction (for each individual tree).
 This technique enhance the predictive accuracy and overcomes the overfitting problem associated with single decision tree.
 Its strength lies in its ability to handle large datasets without extensive data preprocessing requirements. 
 
-One student focused on different Random Forest algorithm, including RF using the synthetic minority oversampling techniques (SMOTE) or Boosted RF. It showed interesting premises with from a predictive standpoint. \cite{lee_machine_2019}
+One student focused on different \acrfull{rf} algorithm, including \acrfull{rf} using the \acrfull{smote} or Boosted \acrshort{rf}. It showed interesting premises with from a predictive standpoint. \cite{lee_machine_2019}
 \begin{table}[H]
     \centering
-    \caption{AUC results of the classifiers used in this study\cite{lee_machine_2019}}
+    \caption{\acrfull{acr} results of the classifiers used in this study\cite{lee_machine_2019}}
     \begin{tabular}{|c|c|}
         \hline
         \textbf{Model} & \textbf{AUC}\\
         \hline
-        Random Forest & 0.986 \\
+        \acrfull{rf} & 0.986 \\
         \hline
-        RF + SMOTE & 0.986\\
+        \acrshort{rf} + \acrshort{smote} & 0.986\\
         \hline
-        Boosted RF & 0.988 \\
+        Boosted \acrshort{rf} & 0.988 \\
         \hline
     \end{tabular}
     \label{tab:auc_values_lee}
 \end{table}
 
-Boosted RF is an advanced version of RF using boosting. Boosting is a method of sequentially improving a model's accuracy by focusing on previous models' misclassification. The algorithm starts with a base RF and iteratively adds more trees. Each new tree trained on the residuals of the previous ensemble of trees. This process continues until a specified number of trees are added, or no significant improvement is observed.
+Boosted \acrshort{rf} is an advanced version of \acrshort{rf} using boosting. Boosting is a method of sequentially improving a model's accuracy by focusing on previous models' misclassification. The algorithm starts with a base \acrshort{rf} and iteratively adds more trees. Each new tree trained on the residuals of the previous ensemble of trees. This process continues until a specified number of trees are added, or no significant improvement is observed.
 
-SMOTE is a powerful approach used in ML. Primarily used when dealing with imbalanced datasets (datasets where one class, usually the class of interest, is underrepresented compared to other classes). These datasets lead to poorly performing and biased models.
-However, it's important to apply SMOTE carefully, as it can introduce noise into the dataset. This approach is best used with a large dataset and when the minority class is underrepresented in order to create meaningful synthetic samples.
+\acrfull{smote} is a powerful approach used in \acrshort{ml}. Primarily used when dealing with imbalanced datasets (datasets where one class, usually the class of interest, is underrepresented compared to other classes). These datasets lead to poorly performing and biased models.
+However, it's important to apply \acrshort{smote} carefully, as it can introduce noise into the dataset. This approach is best used with a large dataset and when the minority class is underrepresented in order to create meaningful synthetic samples.
 
 \end{document}
