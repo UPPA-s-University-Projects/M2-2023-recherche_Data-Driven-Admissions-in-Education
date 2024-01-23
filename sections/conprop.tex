@@ -9,38 +9,21 @@ But first, let's look into which data we have access to, and which we shall dete
 
 \subsection{Feeding data}
 \label{subsec:conprop_feedingdata}
-Our literature survey has identified several key factors influencing student retention and success. We can extrapolate and hypothesis such wide factors could be used to determine student's success.
-These factors, hypothesized to be critical in predicting student trajectories, are:
+Our literature survey \ref{subsubsec:soa_analyticalapproach} has identified several key factors influencing student retention and success. We can extrapolate and hypothesis such wide factors could be used to determine student's success.
+These factors, hypothesized to be critical in predicting student trajectories, are: \cite{opazo_analysis_2021,tinto_dropout_1975,caspersen_teachers_2015,lidia_problema_2006,bejarano_caso_2017,sinchi_acceso_2018,cavero_voluntad_2011,velasco_alisis_nodate}: 
 
 \begin{itemize}
-    \item Family
-    \item Previous educational background
-    \item Academic potential
-    \item Normative congruence
-    \item Friendship support
-    \item Intellectual development
-    \item Educational performance
-    \item Social integration
-    \item Satisfaction
-    \item Institutional commitment
-    \item Student adaptation
-    \item Strict School Rules
-\end{itemize}
-
-The available dataset for our experiment will be processed to align with these factors, ensuring that each is represented accurately to serve as a foundation for our predictive models.
-\begin{itemize}
-    \item Family
-    \item Previous educational background
-    \item Academic potential
-    \item Normative congruence
-    \item Friendship support
-    \item Intellectual development
-    \item Educational performance
-    \item Social integration
-    \item Satisfaction
-    \item Institutional commitment
-    \item Student adaptation
-    \item Strict School Rules
+    \item Family : Does that person got support from their family? Do they still have a family, are they in good term, are they living with them?
+    \item Previous educational background : What is this individual background on an educational level? What was their last diploma, which level are they on? 
+    \item Academic potential : Do they have already been approached as potential excellent student?
+    \item Normative congruence : Does the individual conform to societal rules? 
+    \item Friendship support : Does the individual have good support from friends? Do they have friends? How are they social life with other person (preferably from within their age range)?
+    \item Intellectual development : Has the individual been able to process and have a \textit{regular} intellectual development? Do they have a condition impacting this factor? 
+    \item Educational performance : Have they proven performant on an educational level already? How were they previous performance?
+    \item Social integration : Have they integrated fine with other student, staff and their new academic environment?
+    \item Satisfaction : Are they satisfied with their life's choice (More precisely, are they happy with their study choice?)
+    \item Institutional commitment : Do they commit to their success and to the institutional life? Or do they only go in class and do the bare minimum?
+    \item Student adaptation : Just like \textbf{Social integration} and \textbf{Normative congruence}, how does that individual adapt to its new environment and life?
 \end{itemize}
 
 
@@ -48,7 +31,7 @@ The available dataset for our experiment will be processed to align with these f
 \label{subsec:concimp_dataworkflow}
 Our workflow, as depicted in Figure \ref{fig:dataworkflow}, is designed to systematically transform raw data into actionable insights. Even though we are looking to find excellence in registration for students, this model could be used and/or improved as a security measure to detect students at risk of dropping out.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{res//diagram/ML Workflow.png}
     \caption{Algorithmic workflow for data-driven student success prediction.}
@@ -65,6 +48,18 @@ Each component of the workflow serves a strategic purpose:
     \item Lasso Regression: To perform feature selection, enhancing model interoperability by isolating significant predictors.
 \end{enumerate}
 
+\subsection{Available dataset}
+\label{subsec:available_ds}
+The dataset available to us to test this experiment was gently given by the \acrfull{uppa}.
+This dataset is composed of every student registration for the SIGLIS Master at the \acrshort{uppa} for the academic year from 2019 to 2024.
+
+The available dataset for our experiment will be processed to align with these factors, ensuring that each is represented accurately to serve as a foundation for our predictive models.
+\begin{itemize}
+    \item Previous educational background : What is this individual background on an educational level? What was their last diploma, which level are they on? 
+    \item Academic potential : Do they have already been approached as potential excellent student?
+    \item Educational performance : Have they proven performant on an educational level already? How were they previous performance?
+    \item Institutional commitment : Do they commit to their success and to the institutional life? Or do they only go in class and do the bare minimum?
+\end{itemize}
 
 \subsection{Validation and Expected Outcomes}
 \label{subsec:concimp_validexcpecoutcomes}
@@ -91,5 +86,16 @@ If our system proves efficient and accurate enough, we could then imagine buildi
 We would like to explain our vision on how this could be implemented in universities and institution if the model proves to be viable and efficient. Such a system would pose an ethical problem and would need to be constantly measured, evaluated and should only be administrated by a third party without interest. It would be an impartial entity without any connection with the institution. 
 This model should not be used to exclude students, but should only point out the best result for each formation to reduce dropout rates throughout the country. However, other factors outside this model should be studied by administration for each institution for each formation to correctly select student not only based on the result indicated by our result but also taking into account these other factors. Moreover, any person using this model should not understand which information is used and how by the model itself. People selecting student's should not have anything to do with the registration data, the feeding process and the output of the model. To make this process as imperial as possible, this people should only receive the output without prior knowledge and the resource they usually get to chose student to do their selection.  
 Finally, as said earlier in this paper to protect students, no personal information and their identity (name, surname, country of origin, etc.) should not be involved in the process and the information shared should not allow anyone to trace back the student based on the information given.That is why having compartmentalisation is really important if this system should be put in place in any institution.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{res//diagram/Fonc imp.png}
+    \caption{Implementation on the field of the framework (proposal}
+    \label{fig:imp_fonc}
+\end{figure}
+
+This diagram shows a possible way for institution on one implementation possibility following a pretty basic process. It starts from the data collection at the beginning, from one or multiple database from the institution. A pre-cleanup (and if needed data aggregation) should be deployed by the institution. We have left this part free of choice at  the moment.
+Then, whenever this new dataset is constructed from the institution's data following our factors list, we can send it through are framework model and wait for the output(s). Depending on the institution's \textbf{need} and \textbf{definition of success}, we can provide one or more outputs. We can also outputs model evaluation metrics if wanted / needed. 
+The dataset fed to the machine should include in a certain way these factors seen in subsection \ref{subsec:conprop_feedingdata}, for our framework to be able to create its student profiles and evaluate them.
 
 \end{document}

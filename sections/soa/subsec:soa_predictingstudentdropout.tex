@@ -3,13 +3,39 @@
 \begin{document}
 The body of literature concerning student dropout is comprehensive, encompassing a range of perspectives from diverse academic disciplines. The issue has been approached through psychological and economic lenses, utilizing both qualitative and quantitative research methods. This section is structured to reflect the various domains and methodologies present in prior studies.
 
-We've cut this section in two major subsections. The first one, \ref{subsubsec:soa_analyticalapproach}, will review the different ways of analytical analysis on student dropout. These different approaches went from simple adaptation models to economic models and psycho-pedagogic models to predict and describe student dropout. Then, in \ref{subsec:soa_predictiveapproach} we are going to study different mathematical algorithms and models and use ML models to predict student dropout.
+Here is the evolution of the number of publication by year on different publication platform such as Elsevier and Scopus for the terms : \textbf{Predict student success}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{res//graph/numberOfPub.png}
+    \caption{Number of publication about "Predict student success"}
+    \label{fig:nb_pub}
+\end{figure}
+We can see a net evolution of the number of publication over the year. No matter the publication platform, the number of publications on that subject is increasing more or less strongly (mostly dependant on institutions and platform's size and notoriety, which has nothing to do with our research). One interesting side note is of course the correlation with COVID-19 and how we were force to change our way of working with lock downs happening throughout the world.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{res//graph/covid19_cases.png}
+    \caption{Number of cumulative COVID-19 cases throughout the world \cite{noauthor_covid-19_nodate}}
+    \label{fig:nb_covid19_cases}
+\end{figure}
+A new spike happens when the COVID-19 outbreak happens. Easily explicable by the new challenges arisen by the pandemic situation. School from home lead to easier grade because of non-established way to control student in distance school. Leading to a rise of undergraduate registration because of good grades through out the pandemic. Even though some students shouldn't have the access to this level of education because of their level.
+
+We've cut this section in two major subsections. The first one, \ref{subsubsec:soa_predictiveapproach}, will review the different ways of analytical analysis on student dropout. These different approaches went from simple adaptation models to economic models and psycho-pedagogic models to predict and describe student dropout. Then, in \ref{subsubsec:soa_predictiveapproach} we are going to study different mathematical algorithms and models and use ML models to predict student dropout.
 
 It is interesting to look at the opposite side of the "problem" to gather which information have been used to predict student dropout. We could then hypothesise and extrapolate about if for one student it could predict its failure and for another its success.
 However, some factors cited are sensibly comprehensible about one's failure (for example, it is logical that a student with health and family problem will have a greater probability of failure.) However, even with a good situation, one can be uninterested in its formation of choice and then dropout. 
 What we want to filter and understand from the literature is factors that could lead us to the potential intellect of student such as their hobbies, past experience in the domain, motivation.
 
 But first, let's define success and what is a student choice. There is many ways of defining what is student success. From a societal or governmental (administrative) point of view, the definition can vary technically, but tell the same thing nonetheless. For institution, student's success can be define as the percentage of student who got their diploma, in how many years and the overall grade score. For governments and administration, it could be define as the success rate (number of graduation and overall grades) of national exam. As for the student point of view, success is getting their diploma by the end of the usual cursus. Some may evaluate their success on the grades they've got as well, which can be a factor to determine students who are motivated not only by just getting their diploma but also in actually succeeding their formation by getting good grades and acceding to the top of the promotion.
+Most of the definition of success, at least in this case, is measuring one student's outcomes at the end of its study cycle. However, many of the concepts that are determine as one's success could also be determined as facilitator of one's success, and not the definition of success by itself.
+We will delve into that discussion later in this paper, but defining success can also be considered not absolute, but relative to a time and space. How institution define success might be different from one to another.\cite{weatherton_success_2021}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{res//diagram/sucess-definition-graph.png}
+    \caption{Defining success and its impact on the impact\cite{weatherton_success_2021}}
+    \label{fig:success_impact}
+\end{figure}
+From that same research, they approach the importance of correctly defining success within the parameter of the project because defining the goal will inevitably have impact on all part of the research process (as seen in the figure \ref{fig:success_impact}
+If we are not able to define success, how can we teach a machine to learn to detect success ? The definition of success will lead to the final measure we are thriving towards. It is certainly one of the trickiest part in this research, and this is why we cannot reach the goal to make a universal machine that would work anywhere anytime, and why we will only provide a framework in order to build similar systems. 
 
 A common recurrent topic on that subject is the lack of holistic approach by academia and researchers on the concept of student success. It is often regarded as a “common sense” where student success is measured not by the score of students, but rather how many got their diplomas. \cite{weatherton_success_2021}.
 \end{document}

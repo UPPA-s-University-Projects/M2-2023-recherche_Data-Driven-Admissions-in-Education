@@ -2,5 +2,62 @@
 \graphicspath{{\subfix{../res/}}}
 \begin{document}
 
+For this first version of this paper without any experiment nor result, we want to acknowledge our findings from the literature, discuss the importance of such research on similar subject as well as what we can hypothesis from our research and how a future version could improve on it and implement the original model, or a newer version as well as providing results from the given datasets.
 
+\subsection{Summary of Literature Review Findings}
+% Briefly summarize the key findings and insights gathered from the literature review.
+% Highlight the factors identified in existing research related to student success and dropout.
+First, let's talk about our literature review and conclude on the state, of our state of the art on the subject.
+We saw that many articles and research had been done on the subject or similar subject of predicting students success or dropout using statistical analysis and/or \acrfull{ml} algorithm and \acrfull{ai}.
+We have consider the need to predict student's success or failure the same and coming from the same human factors. When looking at the analytical part of the literature (not focusing on any machine learning model / algorithm), we were able to withdraw a list of factors commonly proven to be identifiable in someone's success and failure, and more particularly including factors targeting students. As put inside our analytical predictive approach from the state of the art \ref{subsubsec:soa_analyticalapproach}, the factors were : 
+\cite{opazo_analysis_2021,tinto_dropout_1975,caspersen_teachers_2015,lidia_problema_2006,bejarano_caso_2017,sinchi_acceso_2018,cavero_voluntad_2011,velasco_alisis_nodate}: 
+
+\begin{itemize}
+    \item Family : Does that person got support from their family? Do they still have a family, are they in good term, are they living with them?
+    \item Previous educational background : What is this individual background on an educational level? What was their last diploma, which level are they on? 
+    \item Academic potential : Do they have already been approached as potential excellent student?
+    \item Normative congruence : Does the individual conform to societal rules? 
+    \item Friendship support : Does the individual have good support from friends? Do they have friends? How are they social life with other person (preferably from within their age range)?
+    \item Intellectual development : Has the individual been able to process and have a \textit{regular} intellectual development? Do they have a condition impacting this factor? 
+    \item Educational performance : Have they proven performant on an educational level already? How were they previous performance?
+    \item Social integration : Have they integrated fine with other student, staff and their new academic environment?
+    \item Satisfaction : Are they satisfied with their life's choice (More precisely, are they happy with their study choice?)
+    \item Institutional commitment : Do they commit to their success and to the institutional life? Or do they only go in class and do the bare minimum?
+    \item Student adaptation : Just like \textbf{Social integration} and \textbf{Normative congruence}, how does that individual adapt to its new environment and life?
+\end{itemize}
+
+When we had gather enough data to found what factors from our datasets we needed to extract to feed our models, we needed to search which models had already been tested and proven within the literature. 
+From this part of the review, coming from many different paper and horizon (different subject, different datasets, different needs, etc.), we were able to gather some recurring models used to detect and predict student's success or failure. Most of these models were basic machine learning models used regularly in the prediction field of \acrshort{ml}
+
+\subsection{Emphasis on Research Gap}
+% Reiterate the identified gap in the literature that your research aims to address.
+% Discuss why investigating the potential correlation between COVID-19 and enrollment rates is crucial
+The subject in itself is broad and has many point of attack. We've been able to see from the literature different research with various economical and societal background, mainly from different parts of the world.  
+While some were interested in finding a way to predict student's failure in different countries such as Chile \cite{ramirez_prediction_2018, opazo_analysis_2021}, South Korea \cite{lee_machine_2019}, India \cite{mardolkar_forecasting_2020}, Germany \cite{berens_early_2018} or much broader such as developing countries in general \cite{mduma_survey_2019, mduma_machine_2019}. 
+%TODO: Continue with how different culture means different factors that needs to be take into account as well as how each model must be tuned to function with the culture it's used in.
+From this different point of view, we were able to grasp the idea that each research would contribute on its own on how models were deployed to detect student's success or failure. However, what really differed from all these papers are the human nature of the problem. Each part of the world, at a given time, as its own culture, norms and societal rules. Even if common human factors could be retrieve not matter the space nor time, other, more important factors, would need to be adapt to the local time and local population. 
+
+Also, much of the literature out there focuses on near real-time detection during the year and not much as a predictive measure to avoid getting into difficult situation for student's and institution. Their goal is to predict whenever a student presents the first sign of failure to help instituter get the student out of the situation before it worsen and the student drop out.
+Not one of them tried to determine student success and failure at the beginning of the process, which is the registration process directly.
+
+\subsection{Importance of the Study}
+We understood that a single machine couldn't work for the entirety of the population. We have to keep in mind that we are not searching for a perfect solution that would work anywhere and anytime, but rather establish a framework that could be used to deploy specific version which would take into account the societal rules and norm of the local population. Humanity keeps evolving over time, predicting excellent student now could differ ten years from now. 
+If we could provide a basic framework that could be easily deployed anywhere, no matter the access to resource, we could in theory help fight student's dropout and find excellence in student before they even enroll in a year of study that would end up in failure.
+It's been made clear that predicting and evaluating one student performance using analytical study with help from \acrshort{ml} and \acrshort{ai}. However, some studies have proven that depending on the societal and economical state of some countries (most of the time in developing countries), these models were not tuned for that specific population and that, limited access to resources blocked the usage of such technologies in institution.
+
+\subsection{Addressing Limitations}
+At the moment of writing, access to needed information had not been granted and we are awaiting some datasets from the \acrfull{uppa} in order to pursue the study and experiment on our system and different models used. 
+As such, the presented system is just an hypothetical system created from the literature review \ref{sec:soa} and still need to be tested and attuned with real life data in order to be proven successful or not.
+Also, by constraint of time, many interesting papers could not have been reviewed in time, and we may have some missing information from other paper that could lead us in the right direction to create this framework.
+
+
+\subsection{Proposed Future Directions}
+Firstly, a complete retake of our state of the art \ref{sec:soa} to include more literature and have a much broader review on our hand will have to be made. 
+Secondly, whenever this new state of the art will be written, and new knowledge acquired, we will want to have access to our testing datasets. This way, we could build our hypothesis system, tweak it and upgrade it to fit the reality of event. 
+Also, access to this dataset will allow us to do a real statistical analysis from our dataset and get actual results from our research.
+
+Then, when this new version has been written and peer-reviewed, we hope to see colleagues extend our research to enhance this framework, built on it to other domain and maybe see institution start implementing such systems in the registration process. 
+
+\subsection{Concluding Remarks}
+Working on this subject in this era of quick progress for \acrshort{ai} has made us open new door to new possibilities and let us wonder how much process in our \textit{day-to-day} life we could enhance to help reduce negative rates (such as student's dropout rate in this case) by providing much needed insight in the load of data presented to institution and corporation alike. 
 \end{document}

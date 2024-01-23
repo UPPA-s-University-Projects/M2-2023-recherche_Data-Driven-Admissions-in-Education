@@ -18,8 +18,7 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
 %Load glossary
-\loadglsentries{res/glossaries/abbreviation}
-
+\loadglsentries{bib/glossaries/abbreviation}
 
 \begin{document}
 
@@ -38,11 +37,14 @@ clement.combier@etud.univ-pau.fr}}
 \pagestyle{plain}
 
 \tableofcontents
+\vspace{16pt}
 \listoffigures
+\vspace{16pt}
 \listoftables
+\vspace{16pt}
 \printglossary[type=\acronymtype, title=Accronymes, toctitle=Accronymes]
 
-\vspace{16pt}
+\vspace{32pt}
 \begin{abstract}
 In the wake of the COVID-19 pandemic and the release of the new \textit{baccalaureate} reform, French education authorities in higher studies faces a surge of enrolments and higher dropouts numbers. Higher grade from students in the baccalaureate as lead, the French registration system in place to accept more and more students in higher degrees paths. Sadly, these new reforms did not take into account the difficulty step created between secondary and higher studies. Thus augmenting the number of dropouts in students who don't have the capacity, motivation and/or will to continue in their path. 
 
@@ -54,6 +56,7 @@ This paper focuses on critical issues within the education system and tries to d
 
 \begin{IEEEkeywords}
 Higher education, Admission process, Machine learning, Data analytics, Success rate, Dropout rate, Student profile, Optimization, Profile-degree matching, Admission management, High-achieving students, Adaptive education.
+
 \end{IEEEkeywords}
 \vspace{16pt}
 
@@ -65,19 +68,20 @@ Higher education, Admission process, Machine learning, Data analytics, Success r
 \label{sec:soa}
 \subfile{sections/soa}
 
-
 \section{Analysis}
 \label{sec:analysis}
 \subfile{sections/analysis}
-
 
 \section{Conceptual proposal}
 \label{sec:conprop}
 \subfile{sections/conprop}
 
-\section{Implementation}
-\label{sec:imp}
-\subfile{sections/imp}
+%Didn't had the time to recieve and experiment with the different datasets.
+%So the implementation will have to be added in a second time (version)
+%TODO: Add the implementation when experimentations are done
+% \section{Implementation}
+% \label{sec:imp}
+% \subfile{sections/imp}
 
 \section{Conclusion}
 \label{sec:conclusion}
@@ -87,6 +91,7 @@ Higher education, Admission process, Machine learning, Data analytics, Success r
 \section{Acknowledgment}
 \label{sec:aknow}
 I would like to thank all the faculty for their welcome, help, and support throughout this year. Helping me both on my paper and on my work at the lab. I would like to personally thanks Dr. Ernesto Exposito, Dr. Mamadou Lamine Gueye and Dr. Houssam Kansso as well as PhD. student Nicolas Evain for their help and welcome. A special thanks go to Dr. Mamadou Lamine Gueye for following me as a tutor for this last year of Master.
+I'm extending this help to Dr. Claire Kermorvant and Dr. Noëlle Bru for their help on the modeling and analytical study and development. Their inputs have been enriching and precious to me.
 
 I would also like to thank the entirety of the 2023-2024 SIGLIS and Industry 4.0 promotion with whom I've been able to share great times, knowledge and some fun moments during the year. A special thanks go to the SIGLIS promotion for supporting me for two year, especially my flatmates Dorian Cazabat, Lise Laville and Gabriel Das Neves Rodrigues. 
 
