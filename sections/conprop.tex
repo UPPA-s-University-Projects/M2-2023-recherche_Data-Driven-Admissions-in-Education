@@ -1,7 +1,11 @@
 \documentclass[../main.tex]{subfiles}
 \graphicspath{{\subfix{../res/}}}
 \begin{document}
-
+\begin{figure*}[h!]      
+    \includegraphics[width=1\linewidth]{res//diagram/ML Workflow.png}
+    \caption{Algorithmic workflow for data-driven student success prediction.}
+    \label{fig:dataworkflow}
+\end{figure*}
 As we embark on constructing our pipeline for data-driven student success prediction, we must first delineate the data inputs and algorithmic strategies. 
 It is clear that by the results from our state of the art and analysis that a multifaceted algorithmic approach is warranted to optimize outcomes
 To extract as much information and get the possible best results, we have split our system into three inner parts, each with their responsibility, input, and output.
@@ -31,12 +35,7 @@ These factors, hypothesized to be critical in predicting student trajectories, a
 \label{subsec:concimp_dataworkflow}
 Our workflow, as depicted in Figure \ref{fig:dataworkflow}, is designed to systematically transform raw data into actionable insights. Even though we are looking to find excellence in registration for students, this model could be used and/or improved as a security measure to detect students at risk of dropping out.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{res//diagram/ML Workflow.png}
-    \caption{Algorithmic workflow for data-driven student success prediction.}
-    \label{fig:dataworkflow}
-\end{figure}
+
 
 Each component of the workflow serves a strategic purpose:
 
@@ -94,8 +93,10 @@ Finally, as said earlier in this paper to protect students, no personal informat
     \label{fig:imp_fonc}
 \end{figure}
 
-This diagram shows a possible way for institution on one implementation possibility following a pretty basic process. It starts from the data collection at the beginning, from one or multiple database from the institution. A pre-cleanup (and if needed data aggregation) should be deployed by the institution. We have left this part free of choice at  the moment.
+This diagram\ref{fig_imp_fond} shows a possible way for institution on one implementation possibility following a pretty basic process. It starts from the data collection at the beginning, from one or multiple database from the institution. A pre-cleanup (and if needed data aggregation) should be deployed by the institution. We have left this part free of choice at  the moment.
 Then, whenever this new dataset is constructed from the institution's data following our factors list, we can send it through are framework model and wait for the output(s). Depending on the institution's \textbf{need} and \textbf{definition of success}, we can provide one or more outputs. We can also outputs model evaluation metrics if wanted / needed. 
 The dataset fed to the machine should include in a certain way these factors seen in subsection \ref{subsec:conprop_feedingdata}, for our framework to be able to create its student profiles and evaluate them.
+
+
 
 \end{document}
