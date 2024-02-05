@@ -14,28 +14,10 @@ But first, let's look into which data we have access to, and which we shall dete
 \subsection{Feeding data}
 \label{subsec:conprop_feedingdata}
 Our literature survey \ref{subsubsec:soa_analyticalapproach} has identified several key factors influencing student retention and success. We can extrapolate and hypothesis such wide factors could be used to determine student's success.
-These factors, hypothesized to be critical in predicting student trajectories, are: \cite{opazo_analysis_2021,tinto_dropout_1975,caspersen_teachers_2015,lidia_problema_2006,bejarano_caso_2017,sinchi_acceso_2018,cavero_voluntad_2011,velasco_alisis_nodate}: 
-
-\begin{itemize}
-    \item Family : Does that person got support from their family? Do they still have a family, are they in good term, are they living with them?
-    \item Previous educational background : What is this individual background on an educational level? What was their last diploma, which level are they on? 
-    \item Academic potential : Do they have already been approached as potential excellent student?
-    \item Normative congruence : Does the individual conform to societal rules? 
-    \item Friendship support : Does the individual have good support from friends? Do they have friends? How are they social life with other person (preferably from within their age range)?
-    \item Intellectual development : Has the individual been able to process and have a \textit{regular} intellectual development? Do they have a condition impacting this factor? 
-    \item Educational performance : Have they proven performant on an educational level already? How were they previous performance?
-    \item Social integration : Have they integrated fine with other student, staff and their new academic environment?
-    \item Satisfaction : Are they satisfied with their life's choice (More precisely, are they happy with their study choice?)
-    \item Institutional commitment : Do they commit to their success and to the institutional life? Or do they only go in class and do the bare minimum?
-    \item Student adaptation : Just like \textbf{Social integration} and \textbf{Normative congruence}, how does that individual adapt to its new environment and life?
-\end{itemize}
-
 
 \subsection{Data workflow}
 \label{subsec:concimp_dataworkflow}
 Our workflow, as depicted in Figure \ref{fig:dataworkflow}, is designed to systematically transform raw data into actionable insights. Even though we are looking to find excellence in registration for students, this model could be used and/or improved as a security measure to detect students at risk of dropping out.
-
-
 
 Each component of the workflow serves a strategic purpose:
 
@@ -59,6 +41,7 @@ The available dataset for our experiment will be processed to align with these f
     \item Educational performance : Have they proven performant on an educational level already? How were they previous performance?
     \item Institutional commitment : Do they commit to their success and to the institutional life? Or do they only go in class and do the bare minimum?
 \end{itemize}
+
 
 \subsection{Validation and Expected Outcomes}
 \label{subsec:concimp_validexcpecoutcomes}
@@ -93,7 +76,7 @@ Finally, as said earlier in this paper to protect students, no personal informat
     \label{fig:imp_fonc}
 \end{figure}
 
-This diagram\ref{fig_imp_fond} shows a possible way for institution on one implementation possibility following a pretty basic process. It starts from the data collection at the beginning, from one or multiple database from the institution. A pre-cleanup (and if needed data aggregation) should be deployed by the institution. We have left this part free of choice at  the moment.
+This diagram \ref{fig:imp_fonc} shows a possible way for institution on one implementation possibility following a pretty basic process. It starts from the data collection at the beginning, from one or multiple database from the institution. A pre-cleanup (and if needed data aggregation) should be deployed by the institution. We have left this part free of choice at  the moment.
 Then, whenever this new dataset is constructed from the institution's data following our factors list, we can send it through are framework model and wait for the output(s). Depending on the institution's \textbf{need} and \textbf{definition of success}, we can provide one or more outputs. We can also outputs model evaluation metrics if wanted / needed. 
 The dataset fed to the machine should include in a certain way these factors seen in subsection \ref{subsec:conprop_feedingdata}, for our framework to be able to create its student profiles and evaluate them.
 

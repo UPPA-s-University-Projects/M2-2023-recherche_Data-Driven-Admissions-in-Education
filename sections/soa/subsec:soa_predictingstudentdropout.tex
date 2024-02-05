@@ -12,9 +12,9 @@ Here is the evolution of the number of publication by year on different publicat
 \end{figure}
 
 If we dive deeper into the analytical search on these platform (we are going to concentrate on Scopus for now), using this search term : 
-\begin{verbatim}
+\begin{lstlisting}[breaklines]
 TITLE-ABS-KEY ( student  AND dropout )  AND  ( LIMIT-TO ( SUBJAREA ,  "SOCI" )  OR  LIMIT-TO ( SUBJAREA ,  "COMP" )  OR  LIMIT-TO ( SUBJAREA ,  "PSYC" )  OR  LIMIT-TO ( SUBJAREA ,  "ENGI" )  OR  LIMIT-TO ( SUBJAREA ,  "MATH" ) ) 
-\end{verbatim}
+\end{lstlisting}
 We can follow the trend on the number of publication each year about the subject of student dropout prediction and we can also once again notice the longevity of the subject in research, dating all the way back since the 1950's.
 Here is the analysis as a graph extracted from Scopus : 
 \begin{figure}[H]
@@ -41,7 +41,10 @@ We can also retrieve the number of document \textbf{by country} and \textbf{by s
 
 We this understand how universal this problem is from all the different top countries publishing about that subject since the 1950's. At least one country from the five continent have one publication in this subject. Moreover, many fields have looked into the subject, giving us a lot of interesting point of view to analyze from.
 
-Now, if we look for the same subject but adding the \acrshort{ml} or \acrshort{ai} to it :TITLE-ABS-KEY ( student  AND  dropout  AND  ( machine  AND  learning  OR  artificial  AND  intelligence ) )  AND  ( LIMIT-TO ( SUBJAREA ,  "SOCI" )  OR  LIMIT-TO ( SUBJAREA ,  "COMP" )  OR  LIMIT-TO ( SUBJAREA ,  "PSYC" )  OR  LIMIT-TO ( SUBJAREA ,  "ENGI" )  OR  LIMIT-TO ( SUBJAREA ,  "MATH" )  OR  LIMIT-TO ( SUBJAREA ,  "DECI" ) )|
+Now, if we look for the same subject but adding the \acrshort{ml} or \acrshort{ai} to it :
+\begin{lstlisting}[breaklines]
+TITLE-ABS-KEY ( student  AND  dropout  AND  ( machine  AND  learning  OR  artificial  AND  intelligence ) )  AND  ( LIMIT-TO ( SUBJAREA ,  "SOCI" )  OR  LIMIT-TO ( SUBJAREA ,  "COMP" )  OR  LIMIT-TO ( SUBJAREA ,  "PSYC" )  OR  LIMIT-TO ( SUBJAREA ,  "ENGI" )  OR  LIMIT-TO ( SUBJAREA ,  "MATH" )  OR  LIMIT-TO ( SUBJAREA ,  "DECI" ) )
+\end{lstlisting}
 
 We obtain the following graph :
 \begin{figure}[H]
