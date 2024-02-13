@@ -5,7 +5,7 @@
 Let's begin this implementation by studying our raw dataset (cleaned) and defining the outcomes we want from our system. When these two sections will have been discussed, and choices made, we are going to explore the construct and results from our experimental system.
 
 \subsection{Available dataset}
-\label{subsec:available_ds}
+\label{subsec:imp_available_ds}
 The dataset available to us to test this experiment was gently given by the \acrfull{uppa}.
 This dataset is composed of every student registration for the SIGLIS Master at the \acrshort{uppa} for the academic year from 2019 to 2024.
 
@@ -22,7 +22,7 @@ First, let's analyse this raw dataset to determine how we can apply our framewor
 
 \subsection{Analysing the raw dataset}
 We made a first study of our raw dataset (after some light cleaning of it) to try and understand the data we are working with. First, we wanted to understand the data universe itself. How many entry have we available on our hand. This is the result of this first analysis :
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Number of Students per Academic Year}
   \begin{tabular}{|c|c|}
@@ -45,14 +45,14 @@ We made a first study of our raw dataset (after some light cleaning of it) to tr
 Our dataset is small for our need, so we will need to exclude some parts of our conceptual model to test at least our basis hypothesis of being able to cut out dataset into excellence, average and at risk student.
 Here is the model we are going to work with for this first implementation, awaiting more data to arrive to test more modules of our system : 
 
-\begin{figure}      
+\begin{figure}[H]      
     \includegraphics[width=1\linewidth]{res//diagram/simplifiedmdl-Imp_mdl.drawio.png}
     \caption{Simplified algorithmic workflow used in this first implementation.}
     \label{fig:dataworkflow_simp} %lol
 \end{figure}
 
 Continuing on our analytical analysis, we wanted to see the average age of our sample using their year of birth available in our dataset. Here is a heatmap of the different academic year and the hotspots by year of birth : 
-\begin{figure}      
+\begin{figure}[H]      
     \includegraphics[width=1\linewidth]{res/graph/data_analysis/raw/heatymap_year.png}
     \caption{Heatmap of year of birth by academic year}
     \label{fig:heatmap_dob_acayear}
@@ -61,7 +61,7 @@ Continuing on our analytical analysis, we wanted to see the average age of our s
 As we can see, a strong hotspot is the year 1998 with a frequency of 16 over 90 samples. And, for the academic year 2022/2023, we have another strong hotspot for the year of birth 2000 (with a frequency of 9 over 9 for this year of birth) which indicated all students born in 2000 have registered on the same year (2022/2023).
 
 Another variable we wanted to study is the academic mention obtained by students for each academic year. Thus, giving us a view on which was the best and worst years academically in the dataset.
-\begin{figure}      
+\begin{figure}[H]      
     \includegraphics[width=1\linewidth]{res/graph/data_analysis/raw/academicmentions_academic_year.png}
     \caption{Histogram of academic mentions by academic years}
     \label{fig:hist_acament_acayear}
@@ -71,12 +71,12 @@ Another variable we wanted to study is the academic mention obtained by students
 We can detect one \textit{outlier} for this five available academic years. The year 2022/2023 have been the best year so far with an outstanding 4 \textbf{Très bien} (very good) and 15 \textit{Bien} (good). While the year 2018/2019 lagging behind with 3 students over 14 with a \textit{Passable} mention (only average). However, for both years 2021/2022 and 2022/2023, we have more student with no mention at all.
 
 Finaly, we wanted to see the number of student admitted by year, and do a comparative table of mean of student's final grade for each year. 
-\begin{figure}      
+\begin{figure}[H]      
     \includegraphics[width=1\linewidth]{res/graph/data_analysis/raw/nbadmissions_year.png}
     \caption{Evolution on the number of admissions by year}
     \label{fig:evol_nb_admis}
 \end{figure}
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Admission Statistics (global grade mean) per Academic Year}
   \begin{tabular}{|c|c|c|c|}
@@ -100,24 +100,57 @@ As we can see, for each year, the global mean is quite similar, orbiting around 
 \subsection{Defining the outcomes}
 
 As discussed per our \ref{sec:soa} State of the Art and \ref{sec:analysis} Analysis sections, one hardening point in this kind of study is the definition of success. This broad question needs to be answered before constructing the system as the parameters of it will be influenced by our needed outcomes.
-For this first implementation, and according to our available variables and data in our dataset, we will define our success simply based on the final overall grade of the student. Thus, we can define \textbf{our} success as follow :
-\begin{quote}
-    \textbf{Success :} A student who has follow through the registration correctly, is not dispensed of diploma (forbidden students) and who have an overall grade :
-    \begin{equation}
-        grade \geq 16
-    \end{equation}
-\end{quote}
-
-We've chose 16 at the minimum value for success depending on our dataset, which have a maximum of 17 for this variable and to have as much data available to train our system.
+For this first implementation, and according to our available variables and data in our dataset, we will define our success simply based on the final overall grade of the student. 
+From the provided dataset, we are going to define our success to student with a \verb|mention == très bien|.
 
 \subsection{Building and setting up the system}
 
 From figure \ref{fig:dataworkflow_simp}, we must build a system composed of four different \acrshort{ml} algorithm (\acrfull{knn}, \acrfull{if}, \acrfull{lr}), setted up in order to find definition of success within our dataset. This means creating a profile of excellent student with an average grade of at least 16, not forbidden and with a full registration process completed. 
 Then, after training our model, we have to teach him correlations between the profile we have setted-up to train it to find excellency within our registration datasets.
-Using RapidMiner, we have developed this first version of a reviewing, clustering prediction machine following the proposed framework in this paper.
+Using Rapid Miner, we have developed this first version of a reviewing, clustering prediction machine following the proposed framework in this paper.
+Using our available dataset (\ref{subsec:imp_available_ds}), and from the general architecture of our system using our proposed framework, we have been able to develop the first part of our system. 
 
+\begin{figure}[H]      
+    \includegraphics[width=1\linewidth]{res/diagram/MLv1.png}
+    \caption{First version of our system inside Rapid Miner}
+    \label{fig:rapidminer_impv1}
+\end{figure}
 
+\paragraph{clustering old student : } We've cut our system into three distinct layer (plus the control layer in grey). From our original framework proposal, and as discuss precedent in the previous paragraph and sections of this section, we had to detach the analysis layer composed of our \acrfull{nn} component. We have still used \acrfull{pca} during the loading of our data (in lavender) and normalization before beginning with the clustering part (in green). 
+Then in the last layer, (in yellow) we create the first batch of result to detect how good our system was to group students from previous years into our different category. Because we are looking to split our student into three group :
+\begin{itemize}
+    \item At risk
+    \item Average
+    \item Excellent
+\end{itemize}
 
+We have asked our clustering model to differentiate our data into 3 different clusters. What we are interesting in this case is the two extreme; thus we are looking to extract at risk and excellent student. 
 
+\begin{figure}[H]      
+    \includegraphics[width=1\linewidth]{res/graph/data_analysis/imp v1/ScatterPlot_cluster2.png}
+    \caption{Early analysis : Scatter plot}
+    \label{fig:earlyanalysis_scatterplot_impv1}
+\end{figure}
+
+We can start an early analysis of our system from the scatter plot provided from our clustering subsystem presented here. It seems the clusters are somewhat linearly separable along the "mention \verb|:trèsbien"| axis.  Another statistic available from Rapid Miner is the following : 
+\begin{itemize}
+    \item Cluster 0 has 80 instances. It mentions that the term \verb|missing| is significantly smaller in presence compared to the baseline, and the term \verb|très bien| (very good) is equally smaller.
+    \item Cluster 1 has 3 instances. It's mentioned that \verb|missing| is significantly larger (by 2,866.67\%) in these instances, whereas \verb|très bien| is significantly smaller.
+    \item Cluster 2 has 6 instances. Here, \verb|très bien| is 1,383.33\% larger, and \verb|missing| is again significantly smaller.
+\end{itemize}
+
+Even though this result is weak, we must consider the size of our dataset, containing  only 89 individuals! But, as probability tells us, the bigger the number, the greater the results. If such system can already cluster excellency and at risk with such a small dataset, we can only imagine how it could work when gathering hundreds of data across multiple years.
+
+\begin{figure}[H] 
+    \includegraphics[width=1\linewidth]{res/graph/data_analysis/imp v1/centroid_charts.png}
+    \caption{Early analysis : Centroids chart}
+    \label{fig:earlyanalysis_centroidchart_impv1}
+\end{figure}
+
+Another output result from Rapid miner is this centroids chart, showing once again, even with a small dataset, our clustering model has been able to determine the cluster with the specific mentions.
+
+\paragraph{Creating profiles} based on the clusters. We know have our excellent students over the years from the results dataset provided by the \acrshort{uppa}. Our goal now is to map these students with their registration data, the same we will use to trial new registrar. Sadly, we did not have this old data in order to create profiles, thus rendering the rest of this experience stalled. 
+
+Yet, this first part is encouraging, and, with the possible proposal to work on more accurate data for such experiment using the Etudes en France dataset, we would have every data needed to fully launch an experimental system using our proposed framework. From the clustering of old students, to analysing registration data from new registrar to finally predicting which student could be interesting to look after. Moreover, the platform already provided an indicator to signal excellent student that needs to be considered. This will give another way to test our system and its result against already existing systems. 
 
 \end{document}

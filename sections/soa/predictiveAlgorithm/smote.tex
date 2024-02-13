@@ -2,6 +2,11 @@
 \graphicspath{{\subfix{../../../res/}}}
 \begin{document}
 
+\acrfull{smote}, is an algorithm used to address class imbalance in machine learning datasets. In many real-world problems, some classes have far fewer instances than others, which can lead to poor performance of machine learning models. 
 
+In our case, this technique is interesting to consider in the framework because are classes are going to be imbalance. From the at-risk student to excellent one, we have another cluster that will contains the majority of our students (average). Thus, imballancing our classes and rendering the clustering bit more difficult to the machine.
 
+For exemple, one study \cite{lee_machine_2019} explains that in the context of predicting student dropouts, the dataset might be significantly imbalanced — for example, there may be many more instances of students who do not drop out (the majority class) compared to students who do drop out (the minority class). This imbalance can lead to a model that is biased towards predicting the majority class, as it has not 'seen' enough examples of the minority class to make accurate predictions for it.
+
+Using SMOTE in conjunction with other machine learning techniques, such as ensemble methods, can further enhance the performance of the predictive models, as demonstrated by the improved AUC (Area Under the Curve) values when SMOTE is applied with Random Forest and Boosted Decision Trees in the study.\cite{lee_machine_2019,beyan_classifying_2015, galar_review_2012,gong_rhsboost_2017,haixiang_bpso-adaboost-knn_2016,haixiang_learning_2017}
 \end{document}
