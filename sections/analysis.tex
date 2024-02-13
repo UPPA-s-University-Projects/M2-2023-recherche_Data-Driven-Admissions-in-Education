@@ -2,11 +2,13 @@
 \graphicspath{{\subfix{../res/}}}
 \begin{document}
 We will now do an analysis from the literature review on how we can approach the problem, using what's been already made and how we can improve on it.
+We've seen from figures \ref{fig:nb_pub, fig:nb_pub_scopus_predictstudent,fig:nb_pub_scopus_predictstudent_country,fig:nb_pub_scopus_predictstudent_subject, fig:nb_pub_scopus_predictstudent_AI, fig:nb_pub_scopus_predictstudent_country} and \ref{fig:nb_pub_scopus_predictstudent_subject} how much the field of study for early system detection for student drop-out is extensive. However, this is not the goal of our study to create a framework for a system that could both predict students dropout but more importantly success and excellence for a specific formation. 
+However, we can extrapolate and hypothesise that if such systems could beneficently be used and had been developed to predict students at risk, why a continuity in the research could lead in a one and three system to both help in the registration process, take student at risk as early as the registration and how we could help excellent student for a specific formation to achieve unleash their true potential.
+We will take our finding and consider them useful to determine student success, beginning with the factors (subsection \ref{subsubsec:soa_analyticalapproach}) to determine variables we could retrieve from the feeding data in order to help with the clustering, analysis and prediction.
 
 \subsection{Factors}
 \label{subsec:analysis_factors}
 First of all, what differentiate this research from all the other we have read throughout the literature analysis is that we are not seeking prediction on student's dropout but rather on student success and early in the process and not during the curriculum year. However, there is plenty of interesting information we can gather from these papers. As described in the \ref{sec:soa} State of Art, we can gather factors that, in theory could help predict student's dropout. We can hypothesize that by using these factors to determine if one student is at risk of dropping-out, it could for another predict its success in a specific formation. From the list of factors we were able to gather, we have made a statistical analysis of the frequency they appear and their overall score within each paper they are mention it. Below, the table from this study concluding our research.
-
 
 This part of the study showed us how difficult it was to examine our feeding data and how to define the output we are thriving for. Factors, whether they are inputs or outputs, will strongly depend on multiple factors like :
 \begin{itemize}
@@ -17,12 +19,25 @@ This part of the study showed us how difficult it was to examine our feeding dat
     \item Time frame (all factors above will change over time)
 \end{itemize}
 
+\textit{This list has been summarized and grouped into 5 categories, which all includes different factors, has available to read in subsection \ref{subsubsec:soa_analyticalapproach} and in the following papers : 
+\cite{opazo_analysis_2021,tinto_dropout_1975,caspersen_teachers_2015,lidia_problema_2006,bejarano_caso_2017,sinchi_acceso_2018,cavero_voluntad_2011,velasco_alisis_nodate}}
+
 The human part (sociological part) is the most complex in this research. As human have evolved and will evolve, norms will change, and specific factors now may differ in the future. 
+As well as the factors and analytical part of the research (subsection \ref{subsubsec:soa_analyticalapproach}, we must consider the outcome we want from such a system. As discussed in subsection \ref{subsubsec:soa_humanapproach}, we must first begin by defining what we hear by meaning \textbf{success}? Because the literature is extensive and from all around the globe (see Figure \ref{fig:nb_pub_scopus_predictstudent_country, fig:nb_pub_scopus_predictstudent_country}
 The goal will not to find the correct and universal combination of factors, but rather give a framework of \acrshort{ml} algorithm and how to feed them depending on the need of the institution and the goal they are thriving towards.
 
 \subsection{Machine Learning algorithm}
 \label{subsec:analysis_mlalgo}
-Secondly, we need to understand which algorithm model have been used the most and which present the best outcome for our need. As for the factors, we can extrapolate the problem and take it in reverse. So by learning which algorithm presents the best result to predict student's dropout, we could hypothesize that they could also be used to detect student's success. 
+Secondly, we need to understand which algorithm model have been used the most and which present the best outcome for our need. As for the factors, we can extrapolate the problem and take it in reverse. So by learning which algorithm presents the best result to predict student's dropout, we could hypothesize that they could also be used to detect student's success; as already discussed throughout this paper. Many algorithm have been studied in the field, and, for our experiment, we are going to use the following ones : 
+
+\begin{enumerate}
+    \item \acrfull{nn} : To transform human data into profile other algorithm can understand. This technique has already been searched and use as we can read from : \cite{m_alban_she_is_with_the_faculty_of_engineering_and_applied_sciences_of_the_technical_university_cotopaxi_neural_2019, siri_predicting_2015, viloria_integration_2019, zhang_neural_2000}.
+    \item \acrfull{pca} : To reduce the possible dimensional issue we could encounter in such system, by the amount of data and the complexity of our model. This technique has been intensively used in analytical study, and thus has not been directly studied for a specific need of analysing student dropout or success. For this research, PCA could be invaluable. It can help identify the most significant factors affecting student success from a large dataset, reducing the number of variables you need to consider.
+    \item K-Means Clustering : To cluster and group each profile into one of our three category (\textbf{Excellent, average} or \textbf{bad}). It has efficiently been used for clustering tasks inside multiple research over the years, and not only in the field of predicting student success or failure. \cite{de_o_santos_supervised_2019, mardolkar_forecasting_2020,shiful_machine_2021}.
+    \item \acrfull{if} : It's effective in identifying outliers in data, which could be useful for detecting atypical student profiles or behaviors that deviate significantly from the norm. Such, helping find excellent and at risk students.
+    \item \acrfull{lr} : Lasso Regression could help identify the most impactful factors on student success by eliminating less relevant variables, thus simplifying your model and possibly improving its predictive performance. 
+\end{enumerate}
+
 
 \subsection{Analysis conclusion}
 \label{subsec:analysis_conclusion}

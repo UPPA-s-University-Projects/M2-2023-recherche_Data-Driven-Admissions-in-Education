@@ -6,7 +6,7 @@ An estimated 2.97 million students registering for higher education in France fo
 
 However, this increase in enrolment has not necessarily translated into higher success rates. As illustrated in Table \ref{tab:result_bachelor}, the cumulative success rate over 4 years for students enrolled in Bachelor's programs in France remains a concern, with only 39.8\% of the 2010 cohort succeeding by 2014.
 
-\begin{table}[H]
+\begin{table}
     \centering
     \caption{Results in Bachelor's degree for the 2013 and 2014 sessions for students enrolled for the first time in the first year of Bachelor's in 2010-2011.\cite{kabla-langlois_insee_2016}}
     \begin{tabular}{|c|c|}
@@ -26,11 +26,26 @@ But what can be categorized as student success, and how to tell if a student ent
 Another definition we have to pin is the definition of excellent student. By definition, it could be written like so, “an excellent student is one with good grades, a good understanding of the concepts and a general interest in the field of study.” Independent of students with ease for learning, an excellent student may not perform well in a casual course cursus, but out stand in a specific field he or she is interested in. 
 
 This research endeavours to explore and validate the potential of \acrfull{ml} and data analytic in revolutionizing the admission process. The motivation is twofold: to enhance the success rate of students by ensuring they are placed in programs where they are most likely to excel, and to reduce dropout rates by minimizing mismatches between students and programs. We also thrive to found more excellence students within the mass of registration.
+Our goal is to develop a framework to group students during the registration process into clusters based on previous year's information regarding the profile of :
+\begin{itemize}
+    \item \textit{Bad}
+    \item average
+    \item \textbf{Excellent}
+\end{itemize}
+
+students. By creating profiles for each group, we can then train our system to, when encountering new student in the registration process, to detect who fits the formation the best.
 
 We are going to base our experiments and result on the french academic system. However, we are going from the principal that any academic system could use this research to build such registration helping systems. Because of a lack of literature on the french system, we have extended it to the entire world, including all different academic system from different countries. Because the academic process matters less than the actual need and hope from a student and institution point of view, we can exploit these different datas for our research. Yet, as researcher and as readers, we suggest that a line been drawn and remember that a big part of this system is the culture of the country in which this system is based. We are using universal factors to feed our system, but some may vary from country to country.
 
 Another point we need to clarify is that this research is not made to discriminate student nor help the "elite" by creating an even bigger chasm in societal problematic. It is in fact a way to reduce this gap and give each student a chance of getting into higher education and earn some sort of diploma that will suit their need and hope.
 
 This research will explore and proposes of different approach, starting with a detailed methodology, followed by a case study made within the \acrfull{uppa}
-We will then conclude, taking into account our findings and the result of our experiment 
+We will then conclude, taking into account our findings and the result of our experiment.
+Our goals is to : 
+\begin{enumerate}
+    \item Find the most relevant human / sociological / psychological factors that potentially correlate to success or drop-out.
+    \item Propose a way for institute to create 3 groups of student's profiles to split \textbf{bad}, \textbf{average} and \textbf{good} student for a specific formation
+    \item Train our system to learn how to predict the group for one student depending on the registration data available (motivation letter, previous academic path and grades, etc.)
+    \item Learn how to process the output data as result for \textbf{helping} with decision making!
+\end{enumerate}
 \end{document}

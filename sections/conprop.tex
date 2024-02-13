@@ -14,6 +14,12 @@ But first, let's look into which data we have access to, and which we shall dete
 \subsection{Feeding data}
 \label{subsec:conprop_feedingdata}
 Our literature survey \ref{subsubsec:soa_analyticalapproach} has identified several key factors influencing student retention and success. We can extrapolate and hypothesis such wide factors could be used to determine student's success.
+Because our available data is limited and does not answer all the need for such a system, a smaller system will be developed inside the implementation section (\ref{sec:imp}). If an institution would want to follow through the implementation of our framework inside their registration process, they would need to feed the machine (for its optimal potential) : 
+\begin{itemize}
+    \item Motivation letter : To help create profiles for each student, based on the information provided inside the motivation letter. (Analysed and used by our \acrfull{nn} model).
+    \item Previous academic results : To help determine how the student react to casual study systems as well as to determine the determination of this student about studies and infrastructures. Contrary to many studies, grades won't be used solely to determine one's capacity. It's been now proven that our system casually found throughout the globe doesn't help really good student elevate to their full potential; but rather create group of normalize students ready for work, clustering them into group of \textit{simple worker} to \textit{high end careerists.} These results and history will both be used by the neural network as well as the \acrfull{pca}, K-Mean Clustering and \acrfull{if} to help provide a good dataset for the final supervised models, which are going to select the student based on the chosen outcomes.
+    \item Formation information : Because our system needs to be set for each formation and diploma to effectively give the best result, institutions will need to feed it information about the formation we want to trail the registrar against, as well as to determine the old student's profile to determine which profiles corresponds the most to the specific formation the machine will evaluate. 
+\end{itemize}
 
 \subsection{Data workflow}
 \label{subsec:concimp_dataworkflow}
@@ -28,20 +34,6 @@ Each component of the workflow serves a strategic purpose:
     \item Isolation Forest: For anomaly detection, highlighting atypical cases that may require special attention.
     \item Lasso Regression: To perform feature selection, enhancing model interoperability by isolating significant predictors.
 \end{enumerate}
-
-\subsection{Available dataset}
-\label{subsec:available_ds}
-The dataset available to us to test this experiment was gently given by the \acrfull{uppa}.
-This dataset is composed of every student registration for the SIGLIS Master at the \acrshort{uppa} for the academic year from 2019 to 2024.
-
-The available dataset for our experiment will be processed to align with these factors, ensuring that each is represented accurately to serve as a foundation for our predictive models.
-\begin{itemize}
-    \item Previous educational background : What is this individual background on an educational level? What was their last diploma, which level are they on? 
-    \item Academic potential : Do they have already been approached as potential excellent student?
-    \item Educational performance : Have they proven performant on an educational level already? How were they previous performance?
-    \item Institutional commitment : Do they commit to their success and to the institutional life? Or do they only go in class and do the bare minimum?
-\end{itemize}
-
 
 \subsection{Validation and Expected Outcomes}
 \label{subsec:concimp_validexcpecoutcomes}
@@ -69,7 +61,7 @@ We would like to explain our vision on how this could be implemented in universi
 This model should not be used to exclude students, but should only point out the best result for each formation to reduce dropout rates throughout the country. However, other factors outside this model should be studied by administration for each institution for each formation to correctly select student not only based on the result indicated by our result but also taking into account these other factors. Moreover, any person using this model should not understand which information is used and how by the model itself. People selecting student's should not have anything to do with the registration data, the feeding process and the output of the model. To make this process as imperial as possible, this people should only receive the output without prior knowledge and the resource they usually get to chose student to do their selection.  
 Finally, as said earlier in this paper to protect students, no personal information and their identity (name, surname, country of origin, etc.) should not be involved in the process and the information shared should not allow anyone to trace back the student based on the information given.That is why having compartmentalisation is really important if this system should be put in place in any institution.
 
-\begin{figure}[H]
+\begin{figure}
     \centering
     \includegraphics[width=1\linewidth]{res//diagram/Fonc imp.png}
     \caption{Implementation on the field of the framework (proposal}

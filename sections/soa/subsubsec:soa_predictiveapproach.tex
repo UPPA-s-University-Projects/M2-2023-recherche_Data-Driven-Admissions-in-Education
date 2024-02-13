@@ -6,23 +6,17 @@ Several researches focused on predictive approaches such as, Association rules m
 
 Some paper have come with interesting ideas to develop machine learning model which could predict one's understanding about a measured domain. This model could rate someone's knowledge of pre-determine subjects and domain to give an understanding on the individual comfort with the subject at hand. \cite{lan_sparse_2014}
 
-In this paper, we are going to analyse the following models read from these literature \cite{mduma_survey_2019,quinlan_induction_1986,yadav_mining_2012,heredia_student_2015,ramirez_prediction_2018,cox_regression_1958,perez_modelo_2018,pandey_data_2011,cover_nearest_1967,mardolkar_forecasting_2020,zhang_neural_2000,rudin_stop_2019,siri_predicting_2015,m_alban_she_is_with_the_faculty_of_engineering_and_applied_sciences_of_the_technical_university_cotopaxi_neural_2019,boser_training_1992,lee_machine_2019,behr_early_2020,friedman_stochastic_2002,eckert_analysis_2015,tenpipat_student_2020,liang_machine_2016,liang_big_2016,fischer_angulo_modelo_2012,miranda_analysis_2017,viloria_integration_2019,kemper_predicting_2020,agrusti_university_2019}:
-\begin{enumerate}
-\item \acrfull{dt}
-\item Logistic Regression
-\item \acrfull{knn}
-\item \acrfull{nn}
-\item \acrfull{svm}
-\item \acrfull{rf}
-%\item \acrfull{pca}
-%\item K-Mean clustering
-%\item Isolation Forest
-%\item Lasso Regression
-%\item \textit{SMOTE}
-\end{enumerate}
+The literature is extensive in this field regarding student dropout using machine learning for early detection systems. Even though, most literature available only focus on dropout and predicting / rising early sign of problems for one student, the idea is linked to how we can predict not drop-outs, but success.
+Many different algorithm and systems have been searched and tested out, from \acrfull{dt} used to classify and predict student dropout as early as possible \cite{behr_early_2020, heredia_student_2015, hofmann_rapidminer_2016, kemper_predicting_2020, lee_machine_2019, liang_big_2016, liang_machine_2016, quinlan_induction_1986,ramirez_prediction_2018,rokach_data_2015, song_decision_2015,tenpipat_student_2020,viloria_integration_2019,tin_kam_ho_random_1995}
+to \acrfull{rf}, for mostly the same reason; but adopting a different mathematical approach on the prediction and \acrshort{ml} part. \cite{behr_early_2020,lee_machine_2019,liang_big_2016,liang_machine_2016,tenpipat_student_2020,tin_kam_ho_random_1995} passing by Logistic Regression to also predict student dropout or, in this case, help with the analysis of student and proceed with data mining to help analysing students.\cite{kemper_predicting_2020, kroc_graduation_1997, lan_sparse_2014, liang_big_2016, liang_machine_2016, novick_axioms_1966}
+Because our first goal is to cluster our previous student to understand the profile of excellent, average and bad student, we have searched for paper with an interest in clustering student to forecast student dropout using techniques such as \acrfull{knn} or K-Means Clustering to cluster students into group, thus, helping develop an early alarm system. \cite{de_o_santos_supervised_2019, mardolkar_forecasting_2020,shiful_machine_2021}
+Something to take into account is the possibility for imbalance classes with our datasets and models. One remedy studied in the field is \acrfull{smote} to help with this potential imbalance that we could encounter because our number of examples to define the bad and perhaps the more difficult, excellent student will be crushed by the average examples. Thankfully, study such as \cite{galar_review_2012, haixiang_learning_2017, lee_machine_2019} have proposed solution using \acrfull{smote} to reduce class imbalance.  
+
+Finally, because we want to analyse non numerical variable from our feeding data, we want to use techniques such as \acrfull{nn} to analyse data like motivation letters in order to give the other algorithm data they can understand, systems using \acrfull{nn} to determine student dropout at university has already been developed and research as well. \cite{m_alban_she_is_with_the_faculty_of_engineering_and_applied_sciences_of_the_technical_university_cotopaxi_neural_2019, siri_predicting_2015, viloria_integration_2019, zhang_neural_2000}.
+
 
 From this review paper \cite{agrusti_university_2019}, we can extract this following table of these different techniques and how often they were used in other research paper.
-\begin{table}[H]
+\begin{table}
     \centering
     \caption{CLASSIFICATION TECHNIQUES frequencies\cite{agrusti_university_2019}}
     \begin{tabular}{|c|c|}
@@ -41,8 +35,7 @@ From this review paper \cite{agrusti_university_2019}, we can extract this follo
     \label{tab:class_tech_freq_agrusti}
 \end{table}
 These models have been chosen as they have been the most recurring ones within the literature. We will analyse each models to list the pros and cons of each one and to determine which one(s) we should use to build our predictive system.
-However, we need to find how frequent the other algorithm can be found in the literature in the domain of academic dropout or success.
-
+We are going to quickly explain and analyse some algorithm from the literature to determine which one are interesting to develop on, their strength and weaknesses as well as how could they work alongside other algorithm to have the best prediction possible.
 
 \vspace{8pt}
 \paragraph{\acrfull{dt}}
@@ -68,27 +61,13 @@ However, we need to find how frequent the other algorithm can be found in the li
 \paragraph{\acrfull{rf}}
 \subfile{predictiveAlgorithm/randomforest}
 
-%TODO: Complete these paragraph down below!
-% \vspace{8pt}
-% \paragraph{\acrfull{pca}}
-% \subfile{predictiveAlgorithm/pca}
+\vspace{8pt}
+\paragraph{\acrfull{pca}}
+\subfile{predictiveAlgorithm/pca}
 
-% \vspace{8pt}
-% \paragraph{K-Mean clustering}
-% \subfile{predictiveAlgorithm/kmeanclustering}
-
-% \vspace{8pt}
-% \paragraph{Isolation Forest}
-% \subfile{predictiveAlgorithm/isolationforest}
-
-% \vspace{8pt}
-% \paragraph{Lasso Regression}
-% \subfile{predictiveAl dgorithm/lassoregression}
-
-% \vspace{8pt}
-% \paragraph{\acrfull{smote}}
-% \subfile{predictiveAlgorithm/smote}
-
+\vspace{8pt}
+\paragraph{\acrfull{smote}}
+\subfile{predictiveAlgorithm/smote}
 
 
 \end{document}
