@@ -2,7 +2,14 @@
 \graphicspath{{\subfix{../res/}}}
 \begin{document}
 
-For this first version of this paper without any experiment nor result, we want to acknowledge our findings from the literature, discuss the importance of such research on similar subject as well as what we can hypothesis from our research and how a future version could improve on it and implement the original model, or a newer version as well as providing results from the given datasets.
+Awaiting further access to more data, we would like to show the premise of such systems and the importance for both institution and students to have guidelines and framework like this one to have less failure, more excellency and better results overall.
+We did not delve inside the psychology and importance such system could bring to the education system in place in our world. However, helping institution retrieve the best from the registration masses and avoid accepting student that will fail, will both help get the most deserving and appropriate into each field while avoiding the waste of time a wrong turn in study can bring, resulting in drooping out for students, and having one empty seat for institution.
+
+This first framework and batch of experiment only got in the micro dimension. Focusing on two masters from one university at a student level. 
+However, such systems, after a good while of experimentation and in-the-field trials, could potentially open the door to more ambitious systems that could not only benefit students and institution, but our society as a whole.
+If such system in place help guide people into fields that corresponds to them the best, it will bring more happiness, less failure, less time and money wasting and, overall, less resource waste. Allowing people that one field could benefit get access and shine their full potential, while helping lost people find the field that will make them shine.
+
+We could imagine such system be used to improve the guidance of students when arriving at their final school year. The problem with guidance counselor has been arising since the 90's in our society. And, if such system could be put in place, we could imagine even prior system, taking place even before child had a chance to decide, in order to help them find their way, could improve the number of school dropout and early working for kids (in difficult areas for exemple).
 
 \subsection{Summary of Literature Review Findings}
 % Briefly summarize the key findings and insights gathered from the literature review.
@@ -27,13 +34,20 @@ We have consider the need to predict student's success or failure the same and c
 
 When we had gather enough data to found what factors from our datasets we needed to extract to feed our models, we needed to search which models had already been tested and proven within the literature. 
 From this part of the review, coming from many different paper and horizon (different subject, different datasets, different needs, etc.), we were able to gather some recurring models used to detect and predict student's success or failure. Most of these models were basic machine learning models used regularly in the prediction field of \acrshort{ml}
+The goal of this study is to create a framework that could be deployed anywhere, not asking too much from institution or on a technical level. This framework would use previous year's student's data in order to create profile through the use of \acrfull{nn}, \acrfull{pca} and other \acrfull{ml} and statistical techniques to then create cluster through K-mean clustering or \acrfull{knn} to cluster each profile into one of three category to alert on :
+\begin{itemize}
+    \item At risk
+    \item Average
+    \item Excellent
+\end{itemize}
+
+Then we trial each registrar into our system against the profile we have established. Comparing them, then deciding which cluster represent this student the best. Then, with this prediction in place, and our group formed containing all registrar, cut into our 3 groups, we can give this result to the decision makers in institutions.
 
 \subsection{Emphasis on Research Gap}
-% Reiterate the identified gap in the literature that your research aims to address.
-% Discuss why investigating the potential correlation between COVID-19 and enrollment rates is crucial
 The subject in itself is broad and has many point of attack. We've been able to see from the literature different research with various economical and societal background, mainly from different parts of the world.  
 While some were interested in finding a way to predict student's failure in different countries such as Chile \cite{ramirez_prediction_2018, opazo_analysis_2021}, South Korea \cite{lee_machine_2019}, India \cite{mardolkar_forecasting_2020}, Germany \cite{berens_early_2018} or much broader such as developing countries in general \cite{mduma_survey_2019, mduma_machine_2019}. 
-%TODO: Continue with how different culture means different factors that needs to be take into account as well as how each model must be tuned to function with the culture it's used in.
+As seen with Figures \ref{fig:nb_pub_scopus_predictstudent_country} and \ref{fig:nb_pub_scopus_predictstudent_country_AI}, we can see how international this problem is. And, again, while each study focused on its own country or one country, we must point the fact that, such system, such definitions of success, are not international. \textbf{Success is cultural defined}, and while in some places, someone success is inarguable, this wouldn't work in other parts of the world!
+We cannot create a system, but we can try to create a global framework that could be used to better the decision making of registration in institutions.
 From this different point of view, we were able to grasp the idea that each research would contribute on its own on how models were deployed to detect student's success or failure. However, what really differed from all these papers are the human nature of the problem. Each part of the world, at a given time, as its own culture, norms and societal rules. Even if common human factors could be retrieve not matter the space nor time, other, more important factors, would need to be adapt to the local time and local population. 
 
 Also, much of the literature out there focuses on near real-time detection during the year and not much as a predictive measure to avoid getting into difficult situation for student's and institution. Their goal is to predict whenever a student presents the first sign of failure to help instituter get the student out of the situation before it worsen and the student drop out.
@@ -43,12 +57,17 @@ Not one of them tried to determine student success and failure at the beginning 
 We understood that a single machine couldn't work for the entirety of the population. We have to keep in mind that we are not searching for a perfect solution that would work anywhere and anytime, but rather establish a framework that could be used to deploy specific version which would take into account the societal rules and norm of the local population. Humanity keeps evolving over time, predicting excellent student now could differ ten years from now. 
 If we could provide a basic framework that could be easily deployed anywhere, no matter the access to resource, we could in theory help fight student's dropout and find excellence in student before they even enroll in a year of study that would end up in failure.
 It's been made clear that predicting and evaluating one student performance using analytical study with help from \acrshort{ml} and \acrshort{ai}. However, some studies have proven that depending on the societal and economical state of some countries (most of the time in developing countries), these models were not tuned for that specific population and that, limited access to resources blocked the usage of such technologies in institution.
+And, as discussed in the start of this conclusion, if such system could help institutions and students alike, the whole of society would benefit. Plus, we would then be certain that such system could be improved, changed, used in other field, extended, to improve all parts of society that are unsustainable by now.
+\textbf{The problem is human, with variation and bias in human. Removing this, removing emotions and human bias can strictly improve our society.} We are not talking about removing human from the equation, quite the opposite actually. \textbf{We are talking of help remove human paradox and facing them with statistical number for choice making, and not emotions.}
 
 \subsection{Addressing Limitations}
 At the moment of writing, access to needed information had not been granted and we are awaiting some datasets from the \acrfull{uppa} in order to pursue the study and experiment on our system and different models used. 
 As such, the presented system is just an hypothetical system created from the literature review \ref{sec:soa} and still need to be tested and attuned with real life data in order to be proven successful or not.
 Also, by constraint of time, many interesting papers could not have been reviewed in time, and we may have some missing information from other paper that could lead us in the right direction to create this framework.
 
+For this paper itself, the dataset limitation has proven quite hard on it. We weren't able to test out all the different part of our framework, and even the one we did, the clustering and creation of profiles based on previous year's data, was short due to the small amount of individuals in the dataset.
+However, such framework could be tested to prove our theory correct or wrong.
+Thankfully, we might be able to reiterate our experiment using the Etudes en France data, which include everything we need to test out our framework in a field environment.
 
 \subsection{Proposed Future Directions}
 Firstly, a complete retake of our state of the art \ref{sec:soa} to include more literature and have a much broader review on our hand will have to be made. 
@@ -59,4 +78,5 @@ Then, when this new version has been written and peer-reviewed, we hope to see c
 
 \subsection{Concluding Remarks}
 Working on this subject in this era of quick progress for \acrshort{ai} has made us open new door to new possibilities and let us wonder how much process in our \textit{day-to-day} life we could enhance to help reduce negative rates (such as student's dropout rate in this case) by providing much needed insight in the load of data presented to institution and corporation alike. 
+We hope this framework will one day be tested and proven right or wrong. And if the results are encouraging, then will it be deployed and used in the field, research more, expended; in order to help improve institutions, life of participants (students) and society itself.
 \end{document}
